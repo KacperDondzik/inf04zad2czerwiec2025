@@ -38,6 +38,18 @@ namespace inf04zad2czerwiec2025
             txtWynik.Text = Szyfruj(txtTekst.Text, klucz);
         }
 
+
+        private void btnZapis_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog okno = new SaveFileDialog();
+            okno.Filter = "Pliki tekstowe (*.txt)|*.txt";
+
+            if (okno.ShowDialog() == true)
+            {
+                File.WriteAllText(okno.FileName, txtWynik.Text);
+            }
+        }
+
     }
 }
 
