@@ -45,6 +45,41 @@
          AcceptsReturn = "True" />
 
 
+        <TextBlock Text = "Tekst zaszyfrowany"
+                   Foreground = "#FAEBD7"
+                   FontSize = "16"
+                   Margin = "450,10,0,0"
+                   HorizontalAlignment = "Left"
+                   VerticalAlignment = "Top" />
+
+        <Border BorderBrush = "#FAEBD7"
+                BorderThickness = "3"
+                CornerRadius = "15"
+                Margin = "450,40,0,0"
+                Width = "300"
+                Height = "270"
+                HorizontalAlignment = "Left"
+                VerticalAlignment = "Top" >
+
+            <TextBox x:Name = "txtWynik"
+                     Background = "#5F9EA0"
+                     Foreground = "#F0F8FF"
+                     BorderThickness = "0"
+                     Margin = "10"
+                     TextWrapping = "Wrap"
+                     AcceptsReturn = "True"
+                     IsReadOnly = "True" />
+        </Border >
+
+        <Button x:Name = "btnZapis"
+                Content = "Zapisz szyfr w pliku"
+                Width = "150"
+                Height = "35"
+                Margin = "520,340,0,0"
+                HorizontalAlignment = "Left"
+                VerticalAlignment = "Top"
+                Background = "#ADD8E6"
+                Click = "btnZapis_Click" />
 
     </Grid>
     
