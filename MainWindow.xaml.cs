@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using Microsoft.Win32;
+using System.Security.Claims;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +13,7 @@ using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Linq;
+using System.IO;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace inf04zad2czerwiec2025
@@ -25,13 +27,19 @@ namespace inf04zad2czerwiec2025
         {
             InitializeComponent();
         }
+
+        private void btnSzyfruj_Click(object sender, RoutedEventArgs e)
+        {
+            int klucz;
+
+            if (!int.TryParse(txtKlucz.Text, out klucz))
+                klucz = 0;
+
+            txtWynik.Text = Szyfruj(txtTekst.Text, klucz);
+        }
+
     }
 }
 
-
-
-
-
-  
 
 
