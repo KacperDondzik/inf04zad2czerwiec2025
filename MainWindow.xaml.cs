@@ -50,6 +50,30 @@ namespace inf04zad2czerwiec2025
             }
         }
 
+
+
+        public string Szyfruj(string tekst, int klucz)
+        {
+            string wynik = "";
+            klucz = klucz % 26;
+
+            foreach (char c in tekst)
+            {
+                if (c == ' ')
+                {
+                    wynik += ' ';
+                }
+                else
+                {
+                    int kod = c - 'a';
+                    int nowyKod = (kod + klucz + 26) % 26;
+                    char nowaLitera = (char)('a' + nowyKod);
+                    wynik += nowaLitera;
+                }
+            }
+
+            return wynik;
+        }
     }
 }
 
