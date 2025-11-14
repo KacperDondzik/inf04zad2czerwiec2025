@@ -44,7 +44,16 @@
          TextWrapping = "Wrap"
          AcceptsReturn = "True" />
 
-
+        <Button x:Name="btnSzyfruj"
+                Content="Zaszyfruj"
+                Width="100"
+                Height="35"
+                Margin="330,200,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="#ADD8E6"
+                Click="btnSzyfruj_Click"/>
+        
         <TextBlock Text = "Tekst zaszyfrowany"
                    Foreground = "#FAEBD7"
                    FontSize = "16"
@@ -85,6 +94,8 @@
     
 </Window>
 
+    
+    
     
     
     
